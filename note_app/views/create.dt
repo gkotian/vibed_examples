@@ -1,0 +1,21 @@
+doctype html
+head
+    meta(charset='utf-8')
+    title A simple note app
+    link(rel='stylesheet', type='text/css', href='note.css')
+    :javascript
+        function setMethod (m) {
+            document.getElementById("myform").method = m;
+        }
+body
+    form#myform(action='/created')
+        p
+            label Topic
+                input(name='form_topic', type='text', required)
+        p
+            label Content
+                textarea(name='form_content')
+        p
+            button(type='reset') Reset
+            button(type='submit', onclick='setMethod("post")') Create via POST
+            button(type='submit', onclick='setMethod("get")') Create via GET

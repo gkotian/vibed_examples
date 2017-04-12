@@ -1,0 +1,13 @@
+- import std.array : empty;
+doctype html
+head
+    meta(charset='utf-8')
+    title The note you created
+    link(rel='stylesheet', type='text/css', href='note.css')
+body
+    p Topic is '#{topic}'
+    - if (content.empty)
+        p Content is empty
+    - else
+        p Content is '#{content}'
+    p Method is '#{req_method_str}'
