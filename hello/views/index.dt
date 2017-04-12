@@ -1,0 +1,22 @@
+doctype html
+head
+    meta(charset='utf-8')
+    title Demo site
+    link(rel='stylesheet', type='text/css', href='demo.css')
+    :javascript
+        console.log('D is awesome')
+body
+    header
+        | Header
+    nav
+        li
+            a(href='link1.txt') Link 1
+        li
+            a(href='link2') Link 2
+        li
+            a(href='link3') Link 3
+    article
+        h1 Title
+        p Some content here.
+    footer
+        | Footer
